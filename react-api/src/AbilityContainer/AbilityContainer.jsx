@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AbilitySearchForm from "./AbilitySearchForm/AbilitySearchForm";
 
 class AbilityContainer extends Component {
     constructor(){
@@ -10,6 +11,7 @@ class AbilityContainer extends Component {
     render(){
         return <div>
             <h1>Ability Container!</h1>
+            <AbilitySearchForm></AbilitySearchForm>
         </div>
     }
     
