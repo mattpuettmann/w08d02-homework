@@ -21,10 +21,10 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <h1>Hello!</h1>
+        <h1>PokeDex App</h1>
         {
           this.state.loggedIn ?
-          <PokeIndex></PokeIndex>
+          <PokeIndex username={this.state.username}></PokeIndex>
           :
           <LoginForm handleLogin={this.handleLogin}></LoginForm>
         }

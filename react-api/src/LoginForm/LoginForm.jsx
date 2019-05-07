@@ -24,22 +24,13 @@ class LoginForm extends Component {
     render(){
         return <div>
             <form onSubmit = {this.handleSubmit}>
-                username: <input onChange = {this.handleChange} type="text" name="username"/>
-                password: <input onChange = {this.handleChange} type="password" name="password"/>
+                Username: <input onChange = {this.handleChange} type="text" name="username"/>
+                Password: <input onChange = {this.handleChange} type="password" name="password"/>
                 <input type="submit"/>
             </form>
         </div>
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 export default LoginForm;
