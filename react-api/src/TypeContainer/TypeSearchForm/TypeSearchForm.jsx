@@ -7,6 +7,15 @@ class TypeSearchForm extends Component {
             search: ""
         }
     }
+    handleChange = (e) => {
+        this.setState({
+            [e.target.type]: e.target.value
+        })
+    }
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.searchPokemon(this.state);
+    }
     render(){
         return <div>
             Search By Type: <input type="text" name="search"/>

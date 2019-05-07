@@ -14,7 +14,7 @@ class NameContainer extends Component {
     }
 
     searchPokemon = async (formData) => {
-        const searchURL = `https://pokeapi.co/GET/api/v2/pokemon?search=${formData.search}`
+        const searchURL = `https://cors-anywhere.herokuapp.com/https://pokeapi.co/api/v2/pokemon?search=${formData.search}`
         const result = await fetch(searchURL);
         const parsedResult = await result.json();
         console.log(parsedResult)
@@ -23,7 +23,6 @@ class NameContainer extends Component {
         })
     }
     
-
     render(){
         const pokemonList = this.state.pokemon.map((pokemon)=>{
             return <div>
@@ -35,9 +34,14 @@ class NameContainer extends Component {
             <NameSearchForm searchPokemon={this.searchPokemon}></NameSearchForm>
             {pokemonList}
         </div>
-    }
-    
+    }  
 }
 
 
 export default NameContainer;
+
+
+//This is the wrong idea right? Should be search one pokemon name and get presented w/ 3 API properties?
+//CORS error - related to the cannot fetch error?
+//^"Failed Promise" ??
+//GET issue - is this api ok?
